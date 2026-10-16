@@ -1,6 +1,6 @@
 # OT Spreadsheet
 
-当前阶段：仅建立项目目录，等待补充需求，尚未开始功能开发。
+当前阶段：已建立项目目录，并根据工作表 JSON 样本划分 TypeScript 模型；功能开发等待后续需求。
 
 ## 三个服务
 
@@ -21,7 +21,7 @@
 | `frontend/packages/view/` | 界面组件 |
 | `frontend/packages/command/` | 操作命令 |
 | `frontend/packages/manager/` | 模型管理 |
-| `frontend/packages/model/` | 模型定义 |
+| `frontend/packages/model/` | 模型定义，已按单张工作表 JSON 样本划分纯类型 |
 | `frontend/packages/common/` | 公共操作 |
 | `frontend/packages/collaboration/` | 协同 |
 | `frontend/packages/formula/` | 公式引擎 |
@@ -46,6 +46,8 @@
 
 ## 当前边界
 
-当前仅包含目录、空目录占位文件、本说明与 Git 忽略规则；未生成业务代码，未安装依赖，未创建工作区、构建或部署配置。
+当前包含目录骨架、TypeScript 数据模型定义、模型划分说明与 Git 忽略规则；未实现运行时业务逻辑，未安装项目依赖，未创建工作区、构建或部署配置。
+
+模型入口为 `frontend/packages/model/src/index.ts`，完整快照类型为 `SheetModel`。字段映射及待补充结构见 [工作表模型划分](docs/model-design.md)。
 
 后续由用户补充包管理工具、OT 实现方案、前端构建工具、Node.js 服务框架、Java 后端框架、构建工具、数据模型、接口与部署要求后，再开展开发。
